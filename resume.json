@@ -1,0 +1,54 @@
+{
+    "basics": [
+        {
+            "firstName": "Shivendra Singh",
+            "email": "shivendra.singh93@gmail.com",
+            "phone": "012-5555555.",
+            "degree": "M.tech (IT)",
+            "summary": "I'm a Full Stack Developer with 4+ years of Exp.",
+            "location": {
+                "address": "10/1706 MG Marg New Delhi",
+                "postalCode": "201301",
+                "city": "Delhi",
+                "State/UT": "Delhi",
+                "country": "INDIA"
+            }
+        }
+    ],
+    "education": [
+        {
+            "institution": "IIT-Allahabad",
+            "area": "M.Tech in Information & Technology",
+            "startDate": "05-07-2015",
+            "endDate": "25-06-2017",
+            "CGPA": "7.8"
+        }
+    ],
+    "work": [
+        {
+            "company": "XYZ",
+            "position": "Software Engineer",
+            "website": "www.xyz.com",
+            "startDate": "15-12-2017",
+            "summary": "A one-sentence to one-paragraph summary of this employer or position"
+        }
+    ],
+    "skills": [
+        "HTML",
+        "CSS",
+        "React",
+        "Node",
+        "GIT",
+        "JIRA",
+        "TFS"
+    ],
+    "languages": [
+        "hindi",
+        "english"
+    ],
+    "Hobbies": [
+        "cricket",
+        "basketball",
+        "table-tennis"
+    ]
+}

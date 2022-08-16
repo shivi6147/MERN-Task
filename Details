@@ -1,0 +1,10 @@
+Difference between window, screen and document in JavaScript ?
+Answer: 
+Window --> is the topmost object of the DOM (Document Object Mode) hierarchy. 
+           It represent a browser window or frame that display the contents of the webpage.
+
+Screen --> window.screen or screen is just information about actual screen dimensions.
+
+Document --> it represent a webpage that is loaded in the browser. By accessing the document object, we
+             can access the element in the HTML page. With the help of document, we can add dynamic content 
+             to our webpage. 
