@@ -1,0 +1,132 @@
+Exercise-1:
+SELECT title FROM movies;
+SELECT director FROM movies;
+SELECT title, director FROM movies;
+SELECT title, year FROM movies;
+SELECT * FROM movies;
+
+Exercise-2:
+SELECT * FROM movies where id=6;
+SELECT * FROM movies where year between 2000 AND 2010;
+SELECT * FROM movies where year NOT between 2000 AND 2010;
+SELECT * FROM movies where id <= 5;
+
+Exercise-3:
+SELECT * FROM movies where title like "toy story%";
+SELECT * FROM movies where director like "John Lasseter";
+	or
+SELECT * FROM movies where director = "John Lasseter";
+SELECT * FROM movies where director not like "John Lasseter";
+	or
+SELECT * FROM movies where director != "John Lasseter";
+SELECT * FROM movies where title like "WALL-_";
+
+
+Exercise-4:
+SELECT DISTINCT director FROM movies ORDER BY director;
+SELECT * FROM movies ORDER BY year DESC limit 4;
+SELECT * FROM movies ORDER BY title limit 5;
+SELECT * FROM movies ORDER BY title limit 5 offset 5;
+
+Exercise-5:
+SELECT city, population FROM north_american_cities where country = "Canada";
+
+SELECT * FROM north_american_cities where country = "United States" ORDER BY latitude DESC;
+
+SELECT * FROM north_american_cities 
+where longitude < (SELECT longitude FROM north_american_cities where city= "Chicago" )
+order by longitude ASC;
+
+SELECT * FROM north_american_cities 
+where country = "Mexico" ORDER BY population DESC limit 2;
+
+SELECT * FROM north_american_cities where country = "United States" ORDER BY population DESC limit 2 offset 2;
+
+
+Execrise-6:
+select * from movies
+inner join boxoffice
+on id = movie_id;
+
+select * from movies
+inner join boxoffice
+on id = movie_id
+where international_sales > domestic_sales;
+
+select * from movies
+inner join boxoffice
+on id = movie_id
+order by Rating desc
+
+Execrise-7:
+
+SELECT distinct building FROM employees;
+
+SELECT * from buildings;
+
+SELECT distinct building_name, role from buildings
+left join employees
+on building_name = building;
+
+Execrise-8:
+SELECT * FROM employees
+where building is null
+
+select * from buildings
+left join Employees
+on building_name = building
+where role is null;
+
+Execrice-9:
+SELECT title, (domestic_sales +international_sales)/1000000 as totalSales FROM movies
+inner join Boxoffice
+on id = movie_id;
+
+SELECT title, (rating*10) as rating FROM movies
+inner join Boxoffice
+on id = movie_id;
+
+SELECT title from movies
+where year % 2 == 0;
+
+Execrise-10:
+SELECT max(years_employed) as maxYear FROM employees;
+
+SELECT role, avg(Years_employed) as Avg_Year FROM employees Group by role;
+
+SELECT building, sum(Years_employed) as total_Years FROM employees
+group by building;
+
+Execrice-11:
+SELECT count(role) FROM employees where role = 'Artist';
+
+SELECT role, count(role) as total FROM employees group by role;
+
+SELECT role, sum(Years_employed) as Total FROM employees where role = "Engineer";
+
+Execrice-12:
+SELECT director, count(title) as count FROM movies
+group by director;
+
+SELECT director, sum(Domestic_sales + International_sales) as total 
+FROM movies inner join Boxoffice on id = movie_id 
+group by Director;
+
+Excerise-13:
+INSERT INTO Movies Values (4,"Toy Story 4", "Shivam", 2022, 120);
+
+Excerise-14:
+SELECT * FROM movies;
+update movies
+set year = 1999
+where id = 3;
+
+update movies
+set title= 1999
+where id = 3;
+
+Excerise-15:
+Delete From Movies where year < 2005;
+
+Delete From Movies where director = "Andrew Stanton";
+
